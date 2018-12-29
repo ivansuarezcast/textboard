@@ -1,9 +1,24 @@
 pragma solidity 0.5.0;
 
 contract Textboard {
-	string public post;
+
+	struct Post{
+		uint id;
+		string text;
+		uint date;
+	}
+
+	mapping(uint=>Post) public posts;
+	
+	uint public postCount;
+
+	function addPost(string memory _text) private{
+		postCount++;
+		posts[postCount]=Post(postCount, _text, 0);
+	}
 
 	constructor() public {
-		post = "Hello World";
+		addPost("Hello world");
+		addPost("Whatup");
 	}
 }
