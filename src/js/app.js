@@ -73,7 +73,15 @@ App = {
     }).catch(function(error) {
       console.warn(error);
     });
-  }
+  },
+	post: function(){
+		var newPost = "this is a new post";
+		App.contracts.Textboard.deployed().then(function(instance){
+	return instance.addPost(newPost);
+//	$("#content").hide();
+//	$("#loader").show();
+	});
+	}
 };
 
 $(function() {

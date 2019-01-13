@@ -12,7 +12,7 @@ contract Textboard {
 	
 	uint public postCount;
 
-	function addPost(string memory _text) private{
+	function addPost(string memory _text) public{
 		postCount++;
 		posts[postCount]=Post(postCount, _text, 0);
 	}
