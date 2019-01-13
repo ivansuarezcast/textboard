@@ -75,7 +75,10 @@ App = {
     });
   },
 	post: function(){
-		var newPost = "this is a new post";
+	//	var newPost = "this is a new post";
+//		var newPost = $('#postText');
+		var newPost = document.getElementById("postText").value;
+		console.log(newPost);
 		App.contracts.Textboard.deployed().then(function(instance){
 	return instance.addPost(newPost);
 //	$("#content").hide();

@@ -1271,12 +1271,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0xD1A6d8C69784cCb0B69Df2a564E0bF7Ad39e292F",
-      "transactionHash": "0xcff86478aa77053d8c7bb6218960c7ef7a3905d63fe323cda56939b8b34c42b0"
+      "address": "0x6762682d8C12ddC7398c2236b45C6402470Db3bA",
+      "transactionHash": "0x1164375ea4dee1b8d142f435dd609034441f8a8a1722e4aa1be255c19aa27388"
     }
   },
   "schemaVersion": "3.0.0",
-  "updatedAt": "2019-01-13T10:58:53.399Z",
+  "updatedAt": "2019-01-13T18:32:39.473Z",
   "devdoc": {
     "methods": {}
   },
