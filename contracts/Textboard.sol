@@ -5,20 +5,20 @@ contract Textboard {
 	struct Post{
 		uint id;
 		string text;
-		uint date;
+		string date;
 	}
 
 	mapping(uint=>Post) public posts;
 	
 	uint public postCount;
 
-	function addPost(string memory _text) public{
+	function addPost(string memory _text, string memory _date) public{
 		postCount++;
-		posts[postCount]=Post(postCount, _text, 0);
+		posts[postCount]=Post(postCount, _text, _date);
 	}
 
 	constructor() public {
-		addPost("Hello world");
-		addPost("Whatup");
+		addPost("Hello world","0");
+		addPost("Whatup","0");
 	}
 }

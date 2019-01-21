@@ -78,9 +78,13 @@ App = {
 	//	var newPost = "this is a new post";
 //		var newPost = $('#postText');
 		var newPost = document.getElementById("postText").value;
+		var d= new Date();
+		var d8 = d.getDate()+"/"+(d.getMonth()+1)+"/"+d.getFullYear()+" "+d.getHours()+":"+d.getMinutes()+":"+d.getSeconds();
+		console.log(d8);
+		var n = d.getTime();
 		console.log(newPost);
 		App.contracts.Textboard.deployed().then(function(instance){
-	return instance.addPost(newPost);
+	return instance.addPost(newPost, d8);
 //	$("#content").hide();
 //	$("#loader").show();
 	});
